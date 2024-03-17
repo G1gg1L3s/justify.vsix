@@ -6,7 +6,7 @@ import * as vscode from "vscode";
 const justify = require("@uwlajs/justify").default;
 
 // Type definitions.
-type callback = (...args : any[]) => any;
+type callback = (...args: any[]) => any;
 
 // Main functions
 function justifySelection(editor: vscode.TextEditor, n: number = 80) {
@@ -111,12 +111,12 @@ export function activate(context: vscode.ExtensionContext) {
                 const config = vscode.workspace.getConfiguration();
 
                 // Attempt to get language-overridable setting.
-                let lineWidth  = langConfig['justify.defaultLineWidth'];
-                if (! lineWidth) {
+                let lineWidth = langConfig['justify.defaultLineWidth'];
+                if (!lineWidth) {
                     // Fall back to global setting.
                     lineWidth = config.get('justify.defaultLineWidth');
                 }
-                if (! lineWidth) {
+                if (!lineWidth) {
                     // Fall back to reasonable default value.
                     lineWidth = 80;
                 }
@@ -133,9 +133,9 @@ export function activate(context: vscode.ExtensionContext) {
 
     // Prompt for a value using functional programming.
     function promptForValue(callback: callback): callback {
-        return async function(editor: vscode.TextEditor) {
+        return async function (editor: vscode.TextEditor) {
             const minValue = 10;
-            let value : any = await vscode.window.showInputBox({
+            let value: any = await vscode.window.showInputBox({
                 prompt: "Enter desire line width",
                 placeHolder: "80",
             });
@@ -178,4 +178,4 @@ function findParagraphEnd(editor: vscode.TextEditor, line: number): number {
 }
 
 // This method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }
