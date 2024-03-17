@@ -3,7 +3,6 @@ import {
     detectIndentation,
     detectMultilinePrefix,
     isBlank,
-    isIndented,
     isStartOfListItem,
     prependMultilinePrefix,
     removeMultilinePrefix,
@@ -63,32 +62,9 @@ export function justifyBlock(text: string, n: number = 80): string {
             continue;
         }
 
-        // extra spaces logic
-        let totalExtraSpaces, spaceGaps, spacePerGap, remainingSpaces;
-
-        if (nWords === 1) {
-            totalExtraSpaces = 0;
-            remainingSpaces = 0;
-            spacePerGap = 0;
-        } else {
-            totalExtraSpaces = n - sentence.length;
-            spaceGaps = nWords - 1;
-            spacePerGap = Math.floor(totalExtraSpaces / spaceGaps);
-            remainingSpaces = totalExtraSpaces - spaceGaps * spacePerGap;
-        }
-
-        // adds extra spaces between words evenly
+        // adds spaces between words evenly
         for (let j = 0; j < nWords - 1; j += 1) {
-            let word = words[j];
-            let extraSpaces;
-            if (remainingSpaces > 0) {
-                extraSpaces = spacePerGap + 1;
-                remainingSpaces -= 1;
-            } else {
-                extraSpaces = spacePerGap;
-            }
-            let spaces = " " + " ".repeat(extraSpaces);
-            line = spaces + word + line;
+            line = " " + words[j] + line;
         }
 
         // last line has different logic
