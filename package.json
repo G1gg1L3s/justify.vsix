@@ -2,7 +2,7 @@
   "name": "justify",
   "displayName": "Justify",
   "description": "Justify-align plain text.",
-  "version": "0.0.2",
+  "version": "0.2.0",
   "publisher": "magiccoder",
   "engines": {
     "vscode": "^1.85.0"
@@ -84,7 +84,7 @@
     ]
   },
   "scripts": {
-	"vsix": "vsce package",
+    "vsix": "vsce package",
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
     "watch": "webpack --watch",
