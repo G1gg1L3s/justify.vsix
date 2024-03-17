@@ -110,7 +110,5 @@
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   },
-  "dependencies": {
-    "@uwlajs/justify": "^1.1.0"
-  }
+  "dependencies": {}
 }

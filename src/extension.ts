@@ -3,7 +3,7 @@
 import * as vscode from "vscode";
 
 // Import our main library
-const justify = require("@uwlajs/justify").default;
+const justify = require("./justify").default;
 
 // Type definitions.
 type callback = (...args: any[]) => any;
