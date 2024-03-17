@@ -1,9 +1,9 @@
 {
-  "name": "justify",
-  "displayName": "Justify",
-  "description": "Justify-align plain text.",
+  "name": "justify-wrap",
+  "displayName": "Justify wrap",
+  "description": "Wrap plain text.",
   "version": "0.2.0",
-  "publisher": "magiccoder",
+  "publisher": "G1gg1L3s",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/uwla/justify.vsix"
+    "url": "https://github.com/G1gg1L3s/justify.vsix.git"
   },
   "icon": "assets/justify-icon-bg-blue.png",
   "activationEvents": [],
